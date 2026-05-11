@@ -111,7 +111,7 @@ void drawPlayer()
 
     float armJumpPose = isGrounded ? 0.0f : -35.0f;
 
-    // ---- 1. KAKI KIRI (digambar dulu biar di belakang) ----
+    // ---- 1. KAKI KIRI ----
     glPushMatrix();
     glTranslatef(-0.18f, -0.5f, 0.0f);
     glRotatef(-swingAngle, 1.0f, 0.0f, 0.0f);
@@ -149,7 +149,7 @@ void drawPlayer()
     glPopMatrix();
     glPopMatrix();
 
-    // ---- 3. BADAN (jacket: deep charcoal navy #2D3A4A) ----
+    // ---- 3. BADAN ----
     setColor(0.18f, 0.23f, 0.29f);
     glPushMatrix();
     glScalef(0.75f, 0.95f, 0.38f);
@@ -223,7 +223,7 @@ void drawPlayer()
     glutSolidCube(1.0f);
     glPopMatrix();
 
-    // ---- 8. KEPALA (warm beige #E8C9A0) ----
+    // ---- 8. KEPALA ----
     setColor(0.76f, 0.57f, 0.37f);
     glPushMatrix();
     glTranslatef(0.0f, 0.78f, 0.0f);
@@ -264,7 +264,7 @@ void drawPlayer()
 
     glPopMatrix(); // end kepala
 
-    // ---- 8b. RAMBUT IKAL (bola-bola di bawah brim topi) ----
+    // ---- 8b. RAMBUT IKAL ----
     setColor(0.42f, 0.31f, 0.23f);
 
     // --- Sisi KIRI ---
