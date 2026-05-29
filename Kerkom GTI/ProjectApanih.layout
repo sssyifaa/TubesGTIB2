@@ -4,7 +4,14 @@ Order=0
 [Editor_0]
 Open=1
 Top=1
-CursorCol=39
-CursorRow=729
-TopLine=130
+CursorCol=3
+CursorRow=141
+TopLine=125
+LeftChar=1
+[Editor_1]
+Open=1
+Top=1
+CursorCol=2
+CursorRow=281
+TopLine=244
 LeftChar=1
