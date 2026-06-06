@@ -1,0 +1,79 @@
+# Project: Project5
+# Makefile created by Dev-C++ 5.7.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = mainApanih.o utils.o texture.o collision.o player.o camera.o cow.o chiken.o tisya.o bro.o house.o environment.o shadow.o mission.o input.o global.o chikenshed.o cowshed.o
+LINKOBJ  = mainApanih.o utils.o texture.o collision.o player.o camera.o cow.o chiken.o tisya.o bro.o house.o environment.o shadow.o mission.o input.o global.o chikenshed.o cowshed.o
+LIBS     = -L"C:/Users/ASUS/Dev-Cpp/MinGW32/lib" -L"C:/Users/ASUS/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -mwindows -lglut32 -lglu32 -lopengl32 -lwinmm -lgdi32
+INCS     = -I"C:/Users/ASUS/Dev-Cpp/MinGW32/include" -I"C:/Users/ASUS/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Users/ASUS/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Users/ASUS/Dev-Cpp/MinGW32/include" -I"C:/Users/ASUS/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Users/ASUS/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Users/ASUS/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
+BIN      = ProjectApanih.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) -DGLUT_STATIC
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+mainApanih.o: mainApanih.cpp
+	$(CPP) -c mainApanih.cpp -o mainApanih.o $(CXXFLAGS)
+
+utils.o: utils.cpp
+	$(CPP) -c utils.cpp -o utils.o $(CXXFLAGS)
+
+texture.o: texture.cpp
+	$(CPP) -c texture.cpp -o texture.o $(CXXFLAGS)
+
+collision.o: collision.cpp
+	$(CPP) -c collision.cpp -o collision.o $(CXXFLAGS)
+
+player.o: player.cpp
+	$(CPP) -c player.cpp -o player.o $(CXXFLAGS)
+
+camera.o: camera.cpp
+	$(CPP) -c camera.cpp -o camera.o $(CXXFLAGS)
+
+cow.o: cow.cpp
+	$(CPP) -c cow.cpp -o cow.o $(CXXFLAGS)
+
+chiken.o: chiken.cpp
+	$(CPP) -c chiken.cpp -o chiken.o $(CXXFLAGS)
+
+tisya.o: tisya.cpp
+	$(CPP) -c tisya.cpp -o tisya.o $(CXXFLAGS)
+
+bro.o: bro.cpp
+	$(CPP) -c bro.cpp -o bro.o $(CXXFLAGS)
+
+house.o: house.cpp
+	$(CPP) -c house.cpp -o house.o $(CXXFLAGS)
+
+environment.o: environment.cpp
+	$(CPP) -c environment.cpp -o environment.o $(CXXFLAGS)
+
+shadow.o: shadow.cpp
+	$(CPP) -c shadow.cpp -o shadow.o $(CXXFLAGS)
+
+mission.o: mission.cpp
+	$(CPP) -c mission.cpp -o mission.o $(CXXFLAGS)
+
+input.o: input.cpp
+	$(CPP) -c input.cpp -o input.o $(CXXFLAGS)
+
+global.o: global.cpp
+	$(CPP) -c global.cpp -o global.o $(CXXFLAGS)
+
+chikenshed.o: chikenshed.cpp
+	$(CPP) -c chikenshed.cpp -o chikenshed.o $(CXXFLAGS)
+
+cowshed.o: cowshed.cpp
+	$(CPP) -c cowshed.cpp -o cowshed.o $(CXXFLAGS)
